@@ -371,10 +371,12 @@ a:focus {
 .contactInBox {
     border: 0px solid black;
     margin: 10px 30px 10px 0px;
-    width: 20%;
+    width: 15%;
     height:120px;
     display: flex;
     background-color: #F0F0F0;
+    font-size: 2.5rem;
+    padding: 40px;
     
 }
 .contac{
@@ -382,6 +384,29 @@ a:focus {
     align-items: center;
 }
 
+
+/* projec */
+
+.proImgBox{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+
+    
+}
+
+.proBox{
+    width: 40%;
+    height: 300px;
+    margin: 30px;
+}
+
+.proImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(90%);
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -412,9 +437,21 @@ a:focus {
         height: 230px;
     }
 
+    /* pro */
+
+    .proBox{
+        width: 100%;
+        margin: 10px;
+    }
+
     /* skills */
     /* s */
     .skill{
         width: 100%;
     }   
+
+    /* contac */
+    .contactInBox{
+        width: 25%;
+    }
 }
