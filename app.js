@@ -24,7 +24,6 @@
 
 console.log(homeT);
 const scroll = (target,tag) => {
-
     target.addEventListener('click', (e) => {
         //tag까지 이동
         e.preventDefault();
@@ -32,17 +31,73 @@ const scroll = (target,tag) => {
     })
 }
 
+const removeAll = () =>{
+    home.classList.remove('selected')
+    about.classList.remove('selected')
+    skills.classList.remove('selected')
+    project.classList.remove('selected')
+    carrer.classList.remove('selected')
+    edu.classList.remove('selected')
+    blog.classList.remove('selected')
+    contact.classList.remove('selected')
+}
 
-// document.addEventListener('scroll', ()=>{
-//     console.log(document.documentElement.scrollTop);
-// });
+const checkSelect = () => {
+    const scrollIndex = document.documentElement.scrollTop;
+    if(scrollIndex < aboutT){
+        removeAll();
+        home.classList.add('selected')
+    } else if(scrollIndex < skillsT){
+        removeAll();
+        about.classList.add('selected')
+    } else if(scrollIndex < projectT){
+        removeAll();
+        skills.classList.add('selected')
+    } else if(scrollIndex < carrerT){
+        removeAll();
+        project.classList.add('selected')
+    } else if(scrollIndex < eduT){
+        removeAll();
+        carrer.classList.add('selected')
+    } else if(scrollIndex < blogT){
+        removeAll();
+        edu.classList.add('selected')
+    } else if(scrollIndex < contactT){
+        removeAll();
+        blog.classList.add('selected')
+    } else {
+        removeAll();
+        contact.classList.add('selected')
+    }
+}
+const listenScroll = ()=>{
+    document.addEventListener('scroll', ()=>{
+        checkSelect();
+    });
+   
+} 
+
+const init = () => {
+    scroll(home,homeT); 
+    scroll(about,aboutT); 
+    scroll(skills,skillsT); 
+    scroll(project,projectT); 
+    scroll(carrer,carrerT); 
+    scroll(edu,eduT); 
+    scroll(blog,blogT); 
+    scroll(contact,contactT);
+    checkSelect();
+    listenScroll(); 
+    //home.classList.add('selected');
+}
 
 
-scroll(home,homeT); 
-scroll(about,aboutT); 
-scroll(skills,skillsT); 
-scroll(project,projectT); 
-scroll(carrer,carrerT); 
-scroll(edu,eduT); 
-scroll(blog,blogT); 
-scroll(contact,contactT); 
+init();
+
+
+
+
+
+
+
+

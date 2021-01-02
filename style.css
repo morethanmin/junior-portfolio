@@ -108,6 +108,12 @@ a:focus {
     color: #4BB4F0;
 }
 
+.selected {
+    color: #4BB4F0 !important;
+
+    /* border: 1px solid black; */
+}
+
 .gray{
     font-size: 0.7rem;
 }
