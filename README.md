@@ -1,4 +1,3 @@
 # portfolio2
-my portfolio
 
-https://morethanmin.github.io/portfolio2/
+This is my portfolio site
