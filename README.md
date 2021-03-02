@@ -1,5 +1,3 @@
 # portfolio2
 
-This is my portfolio site
-
-test
+https://morethanmin.github.io/portfolio2/
