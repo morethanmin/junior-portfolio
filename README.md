@@ -1,3 +1,3 @@
 # portfolio2
 
-https://morethanmin.github.io/portfolio2/
+https://morethanmin.github.io/junior-portfolio
